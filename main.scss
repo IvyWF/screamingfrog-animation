@@ -1,0 +1,105 @@
+@keyframes fly {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(130px, -45px);
+    }
+  
+    40% {
+        transform: translate(250px, 60px);
+    }
+  
+    60% {
+        transform: translate(350px, -40px);
+    }
+
+    80% {
+        transform: translate(0, 60px);
+    }
+
+    100% {
+        transform: translate(130px, -45px);
+    } 
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+}
+
+header {
+    margin-bottom: 150px;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 6em;
+    background-color: grey;
+    padding: 55px;
+}
+
+.flyingInsect {
+    animation: fly 15s ease-in-out infinite;
+}
+
+.frogHalfBody {
+    position: fixed;
+    right: 28.5%;
+    top: 38.7%;
+}
+
+.flog-eyes {
+    &__left {
+        width: 20px;
+        height: 20px;
+        background: #75b42c;
+        border-radius: 50px;
+        position: absolute;
+        left: 65%;
+        top: 33%;
+
+        &::before {
+            content: "";
+            height: 11px;
+            width: 11px;
+            background: #fff;
+            position: relative;
+            border-radius: 5px;
+            display: block;
+            left: 3px;
+            top: -2px;
+        }
+    }
+    
+    &__right {
+        width: 20px;
+        height: 20px;
+        background: #75b42c;
+        border-radius: 50px;
+        position: absolute;
+        left: 67.7%;
+        top: 33.6%;
+    
+        &::before {
+            content: "";
+            height: 11px;
+            width: 11px;
+            background: #fff;
+            position: relative;
+            border-radius: 5px;
+            display: block;
+            left: 3px;
+            top: -2px;
+        }
+    }
+}
